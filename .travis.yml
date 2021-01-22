@@ -1,7 +1,13 @@
 language: php
 
+env:
+  - PHPUNIT_V=4.*
+
 jobs:
   include:
+    - php: 5.2
+      dist: precise
+      env: PHPUNIT_V=3.*
     - php: 5.3
       dist: precise
     - php: 5.4
@@ -17,8 +23,9 @@ jobs:
 
 before_install:
   - rm composer.lock
+  - composer require "phpunit/phpunit:${PHPUNIT_V}" --no-update
 
 install:
-  - composer install
+  - composer update --prefer-source --no-interaction --dev
 
 script: ./vendor/bin/phpunit

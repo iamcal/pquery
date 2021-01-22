@@ -9,6 +9,9 @@
             "email": "cal@iamcal.com"
         }
     ],
+    "require": {
+        "php": ">=5.2.0"
+    },
     "autoload": {
         "classmap": [
             "src/pQuery.php"
