@@ -24,6 +24,7 @@ jobs:
 before_install:
   - rm composer.lock
   - composer require "phpunit/phpunit:${PHPUNIT_V}" --no-update
+  - cat composer.json
 
 install:
   - composer update --prefer-source --no-interaction --dev
