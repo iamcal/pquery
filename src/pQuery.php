@@ -2,7 +2,7 @@
 	class pQuery {
 
 		function __construct($nodes){
-			$this->nodes = is_array($nodes) ? $nodes : [$nodes];
+			$this->nodes = is_array($nodes) ? $nodes : array($nodes);
 		}
 
 		static function fromHTML($html){
@@ -30,7 +30,7 @@
 
 			foreach ($query as $step){
 				# perform filtering
-				$new_nodes = [];
+				$new_nodes = array();
 
 				if (isset($step['tag'])){
 					foreach ($nodes as $node){
@@ -56,7 +56,7 @@
 
 		private function parseQuery($path){
 
-			$query = [];
+			$query = array();
 
 			$tag = '[0-9a-zA-Z]+'; # https://www.w3.org/TR/2011/WD-html5-20110525/syntax.html#elements-0
 			$class = '-?[_a-zA-Z]+[_a-zA-Z0-9-]*'; # http://www.w3.org/TR/CSS21/grammar.html#scanner
