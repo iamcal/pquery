@@ -20,6 +20,10 @@ jobs:
     - php: 8.0
       env: PHPUNIT_V=^9.2
     - php: hhvm
+      env: PHPUNIT_V=5.7.17
+  allow_failures:
+    - php: hhvm
+
 
 before_install:
   - composer require "phpunit/phpunit:${PHPUNIT_V}" --no-update
