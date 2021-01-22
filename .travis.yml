@@ -22,7 +22,6 @@ jobs:
     - php: hhvm
 
 before_install:
-  - rm composer.lock
   - composer require "phpunit/phpunit:${PHPUNIT_V}" --no-update
   - cat composer.json
 
