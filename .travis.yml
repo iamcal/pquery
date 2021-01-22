@@ -15,6 +15,9 @@ jobs:
     - php: 8.0
     - php: hhvm
 
+before_install:
+  - rm composer.lock
+
 install:
   - composer install
 
