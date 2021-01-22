@@ -66,39 +66,39 @@
 			foreach ($parts as $part){
 
 				if (preg_match("!^({$tag})\$!", $part, $m)){
-					$query[] = [
+					$query[] = array(
 						'tag' => $m[1],
-					];
+					);
 					continue;
 				}
 
 				if (preg_match("!^({$tag})\.({$class})\$!", $part, $m)){
-					$query[] = [
+					$query[] = array(
 						'tag' => $m[1],
 						'class' => $m[2],
-					];
+					);
 					continue;
 				}
 
 				if (preg_match("!^({$tag})\#({$id})\$!", $part, $m)){
-					$query[] = [
+					$query[] = array(
 						'tag' => $m[1],
 						'id' => $m[2],
-					];
+					);
 					continue;
 				}
 
 				if (preg_match("!^\.({$class})\$!", $part, $m)){
-					$query[] = [
+					$query[] = array(
 						'class' => $m[1],
-					];
+					);
 					continue;
 				}
 
 				if (preg_match("!^\#({$id})\$!", $part, $m)){
-					$query[] = [
+					$query[] = array(
 						'id' => $m[1],
-					];
+					);
 					continue;
 				}
 
