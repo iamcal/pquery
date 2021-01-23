@@ -21,6 +21,7 @@ jobs:
       env:
         - COVERAGE=true
         - PHPUNIT_V=7.*
+        - XDEBUG_MODE=coverage
     - php: 8.0
       env: PHPUNIT_V=^9.2
     - php: hhvm
