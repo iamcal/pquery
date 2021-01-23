@@ -38,4 +38,20 @@
 			$this->assertEquals(0, count($obj->find('#c')));
 		}
 
+		public function testException(){
+
+			$html = '<p>This is a <b>test</b>.</p>';
+			$obj = pQuery::fromHTML($html);
+
+			$threw = false;
+
+			try {
+				$obj->find('foo > bar');
+			}
+			catch (pQueryException $e){
+				$threw = true;
+			}
+
+			$this->assertEquals(true, $threw);
+		}
 	}

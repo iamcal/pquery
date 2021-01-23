@@ -102,7 +102,7 @@
 					continue;
 				}
 
-				die("Unable to parse query");
+				throw new pQueryException("Unable to parse query");
 			}
 
 			return $query;
@@ -151,3 +151,6 @@
 			}
 		}
 	}
+
+	class pQueryException extends Exception { }
+
