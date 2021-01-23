@@ -43,5 +43,5 @@ script:
   - if [[ $COVERAGE != true ]]; then ./vendor/bin/phpunit; fi
 
 after_success:
-  - if [[ $COVERAGE == true ]]; then ./travis_retry php vendor/bin/php-coveralls -v; fi
+  - if [[ $COVERAGE == true ]]; then travis_retry php vendor/bin/php-coveralls -v; fi
 
