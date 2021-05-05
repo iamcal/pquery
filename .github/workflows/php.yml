@@ -52,6 +52,7 @@ jobs:
     - run: composer remove phpunit/phpunit --dev --no-update
     - run: composer remove php-coveralls/php-coveralls --dev --no-update
     - run: cat composer.json
+    - run: rm composer.lock
 
     - name: Cache Composer packages
       id: composer-cache
