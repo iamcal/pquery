@@ -1,6 +1,6 @@
 # pQuery - jQuery style DOM traversal, in PHP
 
-[![Build Status](https://www.travis-ci.com/iamcal/pquery.svg?branch=main)](https://www.travis-ci.com/iamcal/pquery)
+[![Build Status](https://github.com/iamcal/pquery/actions/workflows/php.yml/badge.svg)](https://github.com/iamcal/pquery/actions)
 [![Coverage Status](https://coveralls.io/repos/github/iamcal/pquery/badge.svg?branch=main)](https://coveralls.io/github/iamcal/pquery?branch=main)
 [![Latest Stable Version](http://img.shields.io/packagist/v/iamcal/pquery.svg?style=flat)](https://packagist.org/packages/iamcal/pquery)
 
